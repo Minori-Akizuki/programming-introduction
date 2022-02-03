@@ -1,0 +1,15 @@
+body {
+  font-family: "游ゴシック","メイリオ";
+}
+
+pre, code {
+  font-family: "Myrica M";
+}
+
+p {
+  text-indent: 1em;
+}
+
+h2, h3 {
+  margin-top: 1em;
+}
