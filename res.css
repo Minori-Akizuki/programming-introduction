@@ -1,9 +1,11 @@
 body {
-  font-family: "游ゴシック","メイリオ";
+  font-family: 'M PLUS 2', sans-serif;
 }
 
 pre, code {
   font-family: "Myrica M";
+  border: 2px;
+  border-color: seagreen;
 }
 
 p {
