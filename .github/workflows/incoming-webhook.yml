@@ -18,16 +18,7 @@ jobs:
         with:
           payload: |
             {
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "plain_text",
-                    "text": "This is a plain text section block.",
-                    "emoji": true
-                  }
-                }
-              ]
+              "text": "github action test"
             }
         env:
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
