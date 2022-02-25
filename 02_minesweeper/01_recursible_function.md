@@ -2,6 +2,39 @@
 
 前章でに色々と制御構文だの関数の使いかただのを説明してきたが色々と覚えておいた方が良いテクニックがいくつかある。本格的に WEB ページを作る前に徒然と紹介していく。
 
+### 値渡しと参照渡し
+
+```JavaScript
+const add1 = function( x ){
+  x = x + 1
+  return x
+}
+
+let t = 3
+
+let s = add1(t)
+
+console.log(t) //  ← どうなる？
+// --------------------
+const addMemver = function (obj) {
+  obj.newMember = "I'm new Member!!!"
+  return obj
+}
+
+let v = { value:10 }
+
+addMemver(v)
+console.log(v) //  ← どうなる？
+addMemver(v).newerMember = "I'm newer!!!!!!"
+console.log(v) //  ← どうなる？
+// -------------
+const na = function (arr) {
+  arr = []
+}
+
+let a = [1, 2, 3, 4, 5]
+```
+
 ### スプレット構文
 
 この機能は少しややこしい。同じ `...` という構文を使って文脈により真逆の事ができるからだ。
@@ -87,6 +120,15 @@ let clonedObj = { ...obj1 }
 
 let mergedObj = { ...obj1, ...obj2 }
 // Object { foo: "baz", x: 42, y: 13 }
+
+const addMemver = function (obj) {
+  obj.newMember = "I'm new Member!!!"
+  return obj
+}
+let u = { val: 10 }
+addMemver({...u})
+console.log(u) // { val: 10 }
+// u の コピーが渡される
 ```
 
 ### 再帰関数
